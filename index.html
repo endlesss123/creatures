@@ -50,7 +50,7 @@
             <li>insect: dashed orange</li>
         </ul>
     </div>
-    <div class="creature">    
+    <div class="creature" data-home="land" data-creature-type="animal">    
         <img src="images/monkey.png" alt="monkey">
         <h3>Monkey</h3>
         <p>Monkeys are cute, but don't try to cuddle them.</p>
@@ -110,7 +110,9 @@
                const myNodeList = document.querySelectorAll("div.creature");
                console.log(myNodeList);
                for(let x=0;x<myNodeList.length;x++){
-                    myNodeList[x].style.backgroundColor = "yellow";
+                   const myHome = myNodeList[x].dataset.home;
+                   alert(myHome);
+                    //myNodeList[x].style.backgroundColor = "yellow";
                  }
 
                
